@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Follow The Fans</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.1.0/math.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <form id="form">
+            <div class="form-group">
+              <label for="">School</label>
+              <input class="form-control" id="school-search" name="school" type="text" placeholder="Desired School Here">
+            </div>
+            <div class="form-group">
+                <label for="conference">Conference</label>
+                <select class="form-control" id="conference" placeholder="Pick Desired Conference">
+                    <option>Atlantic Coast Conference</option>
+                    <option>Big East</option>
+                    <option>Big Ten Conference</option>
+                    <option>Big 12 Conference</option>
+                    <option>Mountain West Conference</option>
+                </select>
+            </div>
+            <div>
+                <label for="">State</label>
+                <select class="form-control" id="state">
+                    
+                </select>
+            </div>
+            <button id="button" type="button" class="btn btn-default">Search</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1>School Input:
+            <span></span>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </body>
+
+<script src="app.js"></script>
+
+</html>
