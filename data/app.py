@@ -56,7 +56,7 @@ def precipitation():
     """Return a list of all passenger names"""
     # Query all passengers
     # results = session.query(Measurement.date,Measurement.prcp).all()
- 
+    # sch = input("Enter name of school")
     results = engine.execute('SELECT school,total_attendance FROM attendance_ncaa2015')
 
     session.close()
