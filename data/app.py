@@ -76,7 +76,3 @@ def precipitation():
 
 if __name__ == '__main__': 
         app.run(debug=True)
-
-@app.route("/school-search",methods = ['POST','GET'])
-def school-search():
-    
