@@ -24,7 +24,11 @@ function runEnter() {
 
   d3.select("h1>span").text(inputValue);
 
-  
+  d3.json(`/school/${inputValue}`).then(
+    function(data){
+      console.log(data);
+    }
+  );
 
 
 
