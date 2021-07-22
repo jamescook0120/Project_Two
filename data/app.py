@@ -1,9 +1,3 @@
-
-import numpy as np
-from numpy.core.arrayprint import DatetimeFormat
-
-
-import sqlalchemy
 import datetime as dt
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
@@ -57,9 +51,8 @@ def precipitation():
     """Return a list of all passenger names"""
     # Query all passengers
     # results = session.query(Measurement.date,Measurement.prcp).all()
-    school_name = 'Air'
    
-    results = engine.execute("SELECT school,total_attendance FROM attendance_ncaa2015 "  )
+    results = engine.execute("SELECT school,total_attendance FROM attendance_ncaa2015")
 
     session.close()
 
