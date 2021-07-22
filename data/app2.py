@@ -49,14 +49,27 @@ def welcome():
 def returnSchoolData(school_name):
     session = Session(engine)    
 
-    results = engine.execute("SELECT school,total_attendance FROM attendance_ncaa2015")
+    results = engine.execute("SELECT school,id FROM Teams20152019 where school = ?",(school_name,))
+
+    # results= engine.execute("""
+# select * from (select a.id,a.school,a.Team,a.City,a.State,a.Current_Conference,b.total_attendance_all from (select * from Teams20152019)a,(select  id,school,sum(Total_attendance) as total_attendance_all from (select * from attendance_ncaa2015
+# union all
+# select * from attendance_ncaa2016
+# UNION ALL
+# select * from attendance_ncaa2017
+# union ALL
+# select * from attendance_ncaa2018
+# union ALL
+# select * from attendance_ncaa2019
+# ) group by school order by id ) as b where a.id=b.id) where school = ?""",(school_name,))
     session.close()
 
     school_data=[]
-    for school,total_attendance in results:
+    for school,id in results:
         school_dict={}
         school_dict["school"] = school
-        school_dict["total_attendance"]=total_attendance
+        school_dict["id"]=id
+        school_data.append(school_dict)
         return jsonify(school_data)
 
 if __name__ == '__main__': 
