@@ -2,10 +2,7 @@
 var button = d3.select("#button");
 
 // Select the form
-var form = d3.select("#form");
-
-// Select the form
-var form = d3.select("#form");
+var form = d3.select("#form-school");
 
 // Create event handlers 
 button.on("click", runEnter);
@@ -26,5 +23,9 @@ function runEnter() {
   console.log(inputValue);
 
   d3.select("h1>span").text(inputValue);
+
+  
+
+
 
 };
