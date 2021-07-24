@@ -17,7 +17,7 @@ engine = create_engine("sqlite:///ncaafootball.sqlite")
 Base = automap_base()
 # reflect the tables
 Base.prepare(engine, reflect=True)
-
+print(Base.classes.keys())
 # Save reference to the table
 # Station = Base.classes.station
 # Measurement = Base.classes.measurement
@@ -47,9 +47,10 @@ def welcome():
 
 @app.route("/schoolsearch/<school_name>")
 def returnSchoolData(school_name):
-    session = Session(engine)    
-
-    results = engine.execute("SELECT school,id FROM Teams20152019 where school = ?",(school_name,))
+    conn=engine.connect() 
+    # print(session)
+    # print(engine)
+    results = conn.execute("SELECT school,id FROM Teams20152019 where school = ?",(school_name,))
 
     # results= engine.execute("""
 # select * from (select a.id,a.school,a.Team,a.City,a.State,a.Current_Conference,b.total_attendance_all from (select * from Teams20152019)a,(select  id,school,sum(Total_attendance) as total_attendance_all from (select * from attendance_ncaa2015
@@ -62,7 +63,7 @@ def returnSchoolData(school_name):
 # union ALL
 # select * from attendance_ncaa2019
 # ) group by school order by id ) as b where a.id=b.id) where school = ?""",(school_name,))
-    
+    # school_all= [school_data,attendance_yoy]
 
     school_data=[]
     for school,id in results:
@@ -70,48 +71,48 @@ def returnSchoolData(school_name):
         school_dict["school"] = school
         school_dict["id"]=id
         school_data.append(school_dict)
-        return jsonify(school_data)
+        # return jsonify(school_data)
 
-    results_2 = engine.execute("SELECT * FROM attendence_ncaa2015 where id = ?",(school_dict["id"]))    
-    results_3 = engine.execute("SELECT * FROM attendence_ncaa2016 where id = ?",(school_dict["id"]))
-    results_4 = engine.execute("SELECT * FROM attendence_ncaa2017 where id = ?",(school_dict["id"])) 
-    results_5 = engine.execute("SELECT * FROM attendence_ncaa2018 where id = ?",(school_dict["id"]))
-    results_6 = engine.execute("SELECT * FROM attendence_ncaa2019 where id = ?",(school_dict["id"]))
-
+    results_2 = conn.execute("SELECT year,total_attendance FROM attendance_ncaa2015 where id = ?",(school_data[0]["id"],))   
+    results_3 = conn.execute("SELECT year,total_attendance FROM attendance_ncaa2016 where id = ?",(school_data[0]["id"],))
+    results_4 = conn.execute("SELECT year,total_attendance FROM attendance_ncaa2017 where id = ?",(school_data[0]["id"],)) 
+    results_5 = conn.execute("SELECT year,total_attendance FROM attendance_ncaa2018 where id = ?",(school_data[0]["id"],))
+    results_6 = conn.execute("SELECT year,total_attendance FROM attendance_ncaa2019 where id = ?",(school_data[0]["id"],))
+    # print(results_2)
     attendance_yoy=[]
-    for total_attendance in results_2:
+    for year,total_attendance in results_2:
         attendance_dict={}
         attendance_dict["year"] = year
         attendance_dict["total_attendance"] = total_attendance
         attendance_yoy.append(attendance_dict)
         attendance_dict={}
-    for total_attendance in results_3:
+    for year,total_attendance in results_3:
         attendance_dict={}
         attendance_dict["year"] = year
         attendance_dict["total_attendance"] = total_attendance
         attendance_yoy.append(attendance_dict)
         attendance_dict={}
-    for total_attendance in results_4:
+    for year,total_attendance in results_4:
         attendance_dict={}
         attendance_dict["year"] = year
         attendance_dict["total_attendance"] = total_attendance
         attendance_yoy.append(attendance_dict)
         attendance_dict={}
-    for total_attendance in results_5:
+    for year,total_attendance in results_5:
         attendance_dict={}
         attendance_dict["year"] = year
         attendance_dict["total_attendance"] = total_attendance
         attendance_yoy.append(attendance_dict)
         attendance_dict={}
-    for total_attendance in results_6:
+    for year,total_attendance in results_6:
         attendance_dict={}
         attendance_dict["year"] = year
         attendance_dict["total_attendance"] = total_attendance
         attendance_yoy.append(attendance_dict)
         attendance_dict={}
-        return jsonify(attendance_yoy)
+        return jsonify(school_data,attendance_yoy)
     
-    session.close()
+    conn.close()
 
 if __name__ == '__main__': 
         app.run(debug=True)
