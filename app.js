@@ -24,12 +24,8 @@ function runEnter() {
 
   d3.select("h1>span").text(inputValue);
 
-  d3.json(`/schoolsearch/${inputvalue}`,function(schoolsearch){
-    console.log(schoolsearch).then;
-    return jsonify
+  d3.json(`/schoolsearch/${inputValue}`,function(schoolsearch){
+    console.log(schoolsearch)
   });
   
-
-
-
 };

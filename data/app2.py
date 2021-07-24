@@ -111,7 +111,7 @@ def returnSchoolData(school_name):
         attendance_yoy.append(attendance_dict)
         attendance_dict={}
         return jsonify(school_data,attendance_yoy)
-    
+
     conn.close()
 
 if __name__ == '__main__': 
