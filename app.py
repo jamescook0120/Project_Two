@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 
 #################################################
@@ -34,16 +34,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def welcome():
-    """List All SQLite Tables"""
-    return (
-        f"Available SQLite Tables:<br/>"
-        f"attendance_ncaa2015<br/>"
-        f"attendance_ncaa2016<br/>"
-        f"attendance_ncaa2017<br/>"
-        f"attendance_ncaa2018<br/>"
-        f"attendance_ncaa2019<br/>"
-        f"Teams20152019<br/>"
-    )
+    return render_template(index.html)
+
 
 @app.route("/schoolsearch/<school_name>")
 def returnSchoolData(school_name):
