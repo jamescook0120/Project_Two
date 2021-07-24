@@ -62,7 +62,7 @@ def returnSchoolData(school_name):
 # union ALL
 # select * from attendance_ncaa2019
 # ) group by school order by id ) as b where a.id=b.id) where school = ?""",(school_name,))
-    session.close()
+    
 
     school_data=[]
     for school,id in results:
@@ -71,6 +71,47 @@ def returnSchoolData(school_name):
         school_dict["id"]=id
         school_data.append(school_dict)
         return jsonify(school_data)
+
+    results_2 = engine.execute("SELECT * FROM attendence_ncaa2015 where id = ?",(school_dict["id"]))    
+    results_3 = engine.execute("SELECT * FROM attendence_ncaa2016 where id = ?",(school_dict["id"]))
+    results_4 = engine.execute("SELECT * FROM attendence_ncaa2017 where id = ?",(school_dict["id"])) 
+    results_5 = engine.execute("SELECT * FROM attendence_ncaa2018 where id = ?",(school_dict["id"]))
+    results_6 = engine.execute("SELECT * FROM attendence_ncaa2019 where id = ?",(school_dict["id"]))
+
+    attendance_yoy=[]
+    for total_attendance in results_2:
+        attendance_dict={}
+        attendance_dict["year"] = year
+        attendance_dict["total_attendance"] = total_attendance
+        attendance_yoy.append(attendance_dict)
+        attendance_dict={}
+    for total_attendance in results_3:
+        attendance_dict={}
+        attendance_dict["year"] = year
+        attendance_dict["total_attendance"] = total_attendance
+        attendance_yoy.append(attendance_dict)
+        attendance_dict={}
+    for total_attendance in results_4:
+        attendance_dict={}
+        attendance_dict["year"] = year
+        attendance_dict["total_attendance"] = total_attendance
+        attendance_yoy.append(attendance_dict)
+        attendance_dict={}
+    for total_attendance in results_5:
+        attendance_dict={}
+        attendance_dict["year"] = year
+        attendance_dict["total_attendance"] = total_attendance
+        attendance_yoy.append(attendance_dict)
+        attendance_dict={}
+    for total_attendance in results_6:
+        attendance_dict={}
+        attendance_dict["year"] = year
+        attendance_dict["total_attendance"] = total_attendance
+        attendance_yoy.append(attendance_dict)
+        attendance_dict={}
+        return jsonify(attendance_yoy)
+    
+    session.close()
 
 if __name__ == '__main__': 
         app.run(debug=True)
