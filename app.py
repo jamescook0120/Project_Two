@@ -34,7 +34,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def welcome():
-    return render_template(index.html)
+    return render_template('index.html')
 
 
 @app.route("/schoolsearch/<school_name>")
@@ -42,25 +42,16 @@ def returnSchoolData(school_name):
     conn=engine.connect() 
     # print(session)
     # print(engine)
-    results = conn.execute("SELECT school,id FROM Teams20152019 where school = ?",(school_name,))
-
-    # results= engine.execute("""
-# select * from (select a.id,a.school,a.Team,a.City,a.State,a.Current_Conference,b.total_attendance_all from (select * from Teams20152019)a,(select  id,school,sum(Total_attendance) as total_attendance_all from (select * from attendance_ncaa2015
-# union all
-# select * from attendance_ncaa2016
-# UNION ALL
-# select * from attendance_ncaa2017
-# union ALL
-# select * from attendance_ncaa2018
-# union ALL
-# select * from attendance_ncaa2019
-# ) group by school order by id ) as b where a.id=b.id) where school = ?""",(school_name,))
-    # school_all= [school_data,attendance_yoy]
+    results = conn.execute("SELECT school,team,city,state,Current_Conference,id FROM Teams20152019 where school = ?",(school_name,))
 
     school_data=[]
-    for school,id in results:
+    for school,team,city,state,Current_Conference,id in results:
         school_dict={}
         school_dict["school"] = school
+        school_dict["team"] = team
+        school_dict["city"] = city
+        school_dict["state"]= state
+        school_dict["Current_Conference"]= Current_Conference
         school_dict["id"]=id
         school_data.append(school_dict)
         # return jsonify(school_data)

@@ -12,7 +12,7 @@ form.on("submit",runEnter);
 function runEnter() {
 
   // Prevent the page from refreshing
-  d3.event.preventDefault();
+  d3.event.preventDefault(
   
   // Select the input element and get the raw HTML node
   var inputElement = d3.select("#school-search");
@@ -22,11 +22,16 @@ function runEnter() {
 
   console.log(inputValue);
 
-  d3.select("h1>span").text(inputValue);
+  var outputValue = {a:b};
 
-  d3.json(`/schoolsearch/${inputValue}`,function(schoolsearch){
-    console.log(schoolsearch)
+  d3.json(`/schoolsearch/${inputValue}`)
+    .then(function(school_data){
+    console.log("Put Me In Coach");
+    outputValue = school_data;
+
   });
-  
+
+  console.log(outputValue);
+  )
 };
 
