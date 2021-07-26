@@ -22,13 +22,15 @@ function runEnter() {
 
   var outputValue = "Hello";
 
-  d3.json(`/schoolsearch/${inputValue}`)
-    .then(function(school_data){
-    console.log("Put Me In Coach");
-    outputValue = school_data
-    console.log(outputValue);
+  // d3.json(`/schoolsearch/${inputValue}`)
+  //   .then(function(school_data){
+  //   console.log("Put Me In Coach");
+  //   outputValue = school_data
+  //   console.log(outputValue);
   
-  });
+  // });
+
+  window.location.href=`/schoolsearch/${inputValue}`
 
   
   

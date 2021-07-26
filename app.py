@@ -1,11 +1,13 @@
 import sqlalchemy
 import datetime as dt
+import pandas as pd
+import json
+import matplotlib.pyplot as plt
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
-
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template,redirect
 
 
 #################################################
@@ -17,11 +19,14 @@ engine = create_engine("sqlite:///ncaafootball.sqlite")
 Base = automap_base()
 # reflect the tables
 Base.prepare(engine, reflect=True)
-print(Base.classes.keys())
+# print(Base.classes.keys())
 # Save reference to the table
 # Station = Base.classes.station
 # Measurement = Base.classes.measurement
 
+plotData = {
+    'school_data':""
+}
 #################################################
 # Flask Setup
 #################################################
@@ -34,6 +39,16 @@ app = Flask(__name__)
 
 @app.route("/")
 def welcome():
+    # Categorical data: Country names
+    print(plotData['school_data'])
+    years = ['2015', 'azil', 'Russia', 'Spain', 'UK', 'India']
+    # Integer value interms of death counts
+    totalAttendance = [112596, 37312, 5971, 27136, 40597, 7449]
+    # Passing the parameters to the bar function, this is the main function which creates the bar plot
+    plt.bar(years, totalAttendance)
+    # Displaying the bar plot
+    # plt.show()
+    plt.savefig('static/images/plot.png')
     return render_template('index.html')
 
 
@@ -92,10 +107,15 @@ def returnSchoolData(school_name):
         attendance_dict["year"] = year
         attendance_dict["total_attendance"] = total_attendance
         attendance_yoy.append(attendance_dict)
-        attendance_dict={}
-        return jsonify(school_data,attendance_yoy)
-
+        attendance_dict={} 
     conn.close()
+    plotData['school_data']=jsonify(school_data,attendance_yoy)
+    with open('data.json', 'w') as outfile:
+        json.dump(plotData['school_data'], outfile)
+
+
+    return redirect("/")
+
 
 if __name__ == '__main__': 
         app.run(debug=True)

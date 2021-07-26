@@ -9,33 +9,37 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.1.0/math.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 </head>
 
 <body>
-  <div> 
-  <nav class="navbar navbar-expand-lg">
-      
+  <div>
+    <nav class="navbar navbar-expand-lg">
+
       <a class="navbar-brand" href="index.html">Home</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">  
+          <li class="nav-item active">
             <a class="nav-link" href="data.html">Data <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="comparisons.html">Comparisons</a>
           </li>
-    </div>    
+        </ul>
+      </div>
+    </nav>
     <div class="container">
       <div class="row">
         <div class="col-md-2">
           <form id="form-school">
             <div class="form-group">
               <label for="">School</label>
-              <input class="form-control" id="school-search" name="school" type="text" placeholder="Desired School Here">
+              <input class="form-control" id="school-search" name="school" type="text"
+                placeholder="Desired School Here">
             </div>
             <!-- <div class="form-group">
                 <form id="form-conference">
@@ -130,8 +134,14 @@
         </div>
       </div>
     </div>
-</body>
+    <img src = "{{url_for('static', filename='images/plot.png')}}">
+  </div>
+
+
+
 
   <script src="/static/js/app.js"></script>
+
+</body>
 
 </html>
