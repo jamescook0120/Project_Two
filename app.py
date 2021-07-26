@@ -51,6 +51,10 @@ def welcome():
     plt.savefig('static/images/plot.png')
     return render_template('index.html')
 
+@app.route("/data")
+def data():
+    return render_template('data.html')
+
 
 @app.route("/schoolsearch/<school_name>")
 def returnSchoolData(school_name):
