@@ -28,7 +28,58 @@ function runEnter() {
     outputValue = school_data
     console.log(outputValue);
   
+  
+    console.log(outputValue[1]);
+  
+    var school_info = outputValue[0];
+
+    var attendanceInfo = outputValue[1];
+    
+    console.log(attendanceInfo);
+    
+    let years = attendanceInfo.map(a => a.year);
+    let attendance =attendanceInfo.map(a => a.total_attendance);
+    
+    console.log(attendance);
+    var data = [ 
+      {
+        x: years,
+        y: attendance,
+        type: 'bar'
+      }
+    ];
+
+
+    var layout = {
+      title: "Your School's Attendance",
+      xaxis: { title: "Years"},
+      yaxis: { title: "Attendance"}
+    };
+
+    // graph = document.getElementById('graphyboy');
+    // Plotly.newPlot( graph, [
+    // x: years,
+    // y: attendance
+    // ], {
+    // margin: { t: 0 } } );
+    Plotly.newPlot('graphyboy', data, layout);
+
+    var tbody = d3.select("tbody");
+
+    school_info.forEach((updateTable) => {
+      var row = tbody.append("tr");
+      Object.entries(updateTable).forEach(([key, value]) => {
+        var cell = row.append("td");
+        cell.text(value);
+      });
+    });
   });
+
+
+  
+ 
+
+  //window.location.href=`/schoolsearch/${inputValue}`
 
   
   
