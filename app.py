@@ -39,16 +39,16 @@ app = Flask(__name__)
 
 @app.route("/")
 def welcome():
-    # Categorical data: Country names
-    print(plotData['school_data'])
-    years = ['2015', 'azil', 'Russia', 'Spain', 'UK', 'India']
-    # Integer value interms of death counts
-    totalAttendance = [112596, 37312, 5971, 27136, 40597, 7449]
-    # Passing the parameters to the bar function, this is the main function which creates the bar plot
-    plt.bar(years, totalAttendance)
-    # Displaying the bar plot
-    # plt.show()
-    plt.savefig('static/images/plot.png')
+    # # Categorical data: Country names
+    # print(plotData['school_data'])
+    # years = ['2015', '2016', '2017', '2018', '2019', 'Total']
+    # # Integer value interms of death counts
+    # totalAttendance = [112596, 37312, 5971, 27136, 40597, 7449]
+    # # Passing the parameters to the bar function, this is the main function which creates the bar plot
+    # # plt.bar(years, totalAttendance)
+    # # # Displaying the bar plot
+    # # # plt.show()
+    # plt.savefig('static/images/plot.png')
     return render_template('index.html')
 
 @app.route("/data")
@@ -112,11 +112,16 @@ def returnSchoolData(school_name):
         attendance_dict["total_attendance"] = total_attendance
         attendance_yoy.append(attendance_dict)
         attendance_dict={} 
+        return jsonify(school_data,attendance_yoy) 
     conn.close()
-    plotData['school_data']=jsonify(school_data,attendance_yoy)
-    with open('data.json', 'w') as outfile:
-        json.dump(plotData['school_data'], outfile)
-
+    # plotData['school_data']=jsonify(school_data,attendance_yoy)
+    # with open('data.json', 'w') as outfile:
+    #     json.dump(plotData['school_data'], outfile)
+    # plotData['school_data']= attendance_dict
+    # years= attendance_dict[0]
+    # total_attendance =attendance_dict[1]
+    # plt.bar(years,total_attendance)
+    # plt.savefig('static/images/plot.png')
 
     return redirect("/")
 

@@ -3,38 +3,76 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=3.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Follow The Fans</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link rel="stlyesheet" href="/static/css/style.css">
   <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.1.0/math.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="/static/js/parallax.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.3.0.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+    body {
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 12px;
+    line-height: 100%;
+    color: rgb(255, 255, 255);
+    background: rgb(65, 69, 116);
+  }
+  h1 {
+    padding: 20px 0;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #eee;
+    text-align: center;
+    background: transparent;
+  }
+  .parallax-window{
+    min-height: 400px;
+    background: transparent;
+  }
+</style>
+
+  </style>
 </head>
 
 <body>
   <div>
     <nav class="navbar navbar-expand-lg">
-
-      <a class="navbar-brand" href="index.html">Home</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button"  data-target="#navbarText" onclick="welcome()">Home
         <span class="navbar-toggler-icon"></span>
-      </button>
+        </button>
+        <button class="navbar-toggler" type="button" data-target="navbarText" onclick="data()">Data
+        </button>
       <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="data.html">Data <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="comparisons.html">Comparisons</a>
-          </li>
-        </ul>
       </div>
-    </nav>
-    <div class="container">
+    </div>
+    </nav>    
+    <div class="parallax-window" data-parallax="scroll" data-image-src="/static/images/IMG_1140.jpg">
+      <div class="container">
       <div class="row">
-        <div class="col-md-2">
+        <h1>
+          Welcome. Our goal here is to help you have a better understanding of the school you will be attending this fall. Recent developments in the NCAA
+          have made it so you are eligible to receive compensation for being and incredible athlete. This tool is simple. Search any school you are considering going to, 
+          and the tool will show you their game attendance based on the last few years. It would make sense that there is some correlation between the amount of eyes on you, 
+          and how much your new brand could be worth. We simply wish to aid you in that goal. 
+        </h1>    
+        <span style="padding-bottom: 40px;"></span>
+      </div>
+      </div>
+      <div>
+      
+
+        </div>
+      </div>
+      </div>
+        
+        <div class="container">
+      <div class="row">
           <form id="form-school">
             <div class="form-group">
               <label for="">School</label>
@@ -125,22 +163,40 @@
             <button id="button" type="button" class="btn btn-default">Search</button>
           </form>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <h1>School Input:
-            <span></span>
-          </h1>
         </div>
       </div>
     </div>
-    <img src = "{{url_for('static', filename='images/plot.png')}}">
-  </div>
-
-
+    <div id="graphyboy" style="width:900px;height:400px;"></div>
+    <!-- <img src = "{{url_for('static', filename='images/plot.png')}}"> -->
+    <div>
+      <div class=container>
+        <div class=row>
+            <table>
+              <thead>
+              <tr>
+                <th>School</th>
+                <th>Team</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Conference</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="parallax-window" data-parallax="scroll" data-image-src="/static/images/IMG_1141.jpg"></div>
+      </div>
+  
+  
+ 
 
 
   <script src="/static/js/app.js"></script>
+  <script>
+    $('.parallax-window').parallax({imageSrc: '/static/images/img_1140.jpg'});
+    $('.parallax-window2').parallax({imageSrc: '/static/images/img_1141.jpg'});
+  </script>
 
 </body>
 
