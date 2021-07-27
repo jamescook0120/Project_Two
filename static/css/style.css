@@ -4,12 +4,12 @@ body {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 18px;
     line-height: 150%;
-    color: rgb(42, 221, 96);
-    background: #0e0c8f;
+    color: #333;
+    background: #efeee7;
   }
   
   header {
-    background: #0e0c8f;
+    background: #333;
   }
   
   h1 {
@@ -26,7 +26,7 @@ body {
   }
   
   a {
-    color: #30d210;
+    color: #d21034;
   }
   
   /* Selecting elements by class */
@@ -65,29 +65,4 @@ body {
     height: 200px;
     margin-right: 20px;
   }
-
   
-  ul {
-    list-style-type: none;
-    margin: 50;
-    padding: 0;
-    width: 300px;
-    background-color: hsl(236, 76%, 48%);
-    color: hotpink
-  }
-  a {
-    list-style-type: none;
-    margin: 50;
-    padding: 0;
-    width: 300px;
-    background-color: hsl(236, 76%, 48%);
-    color: rgb(8, 131, 28)
-    }
-    li {
-    list-style-type: none;
-    margin: 50;
-    padding: 0;
-    width: 300px;
-    background-color: hsl(236, 76%, 48%);
-    color: rgb(8, 131, 28)
-  }

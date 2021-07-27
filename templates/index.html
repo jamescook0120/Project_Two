@@ -6,11 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=3.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Follow The Fans</title>
-<<<<<<< HEAD
-  <link rel="stylesheet" style="text/css" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.1.0/math.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> 
-=======
   <link rel="stlyesheet" href="/static/css/style.css">
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -18,61 +13,51 @@
   <script src="https://cdn.plot.ly/plotly-2.3.0.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <style>
-    body {
+  .content{
+    margin: auto;
+    max-width: fit-content;
+  }
+  body {
     padding: 0;
-    margin: 0;
+    margin:auto;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 12px;
     line-height: 100%;
     color: rgb(255, 255, 255);
-    background: rgb(65, 69, 116);
+    background: rgb(211, 215, 255);
   }
   h1 {
     padding: 20px 0;
     margin: 0;
     margin-bottom: 20px;
     font-size: 28px;
-    color: #eee;
+    color: rgb(255, 250, 250);
     text-align: center;
     background: transparent;
   }
   .parallax-window{
+    padding-top: 50px; 
     min-height: 400px;
     background: transparent;
   }
 </style>
 
   </style>
->>>>>>> 1b592e31e33067285c7e0dfa58f5544835684e7f
 </head>
 
 <body>
   <div>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" style="padding-bottom: 40px;">
+      
         <button class="navbar-toggler" type="button"  data-target="#navbarText" onclick="welcome()">Home
         <span class="navbar-toggler-icon"></span>
         </button>
         <button class="navbar-toggler" type="button" data-target="navbarText" onclick="data()">Data
         </button>
       <div class="collapse navbar-collapse" id="navbarText">
-<<<<<<< HEAD
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">  
-            <a class="nav-link" href="data.html">Data <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="mission.html">Mission</a>
-          </li>
-     <style>
-       
-
-     </style>     
-    </div>    
-    <div class="container">
-=======
-      </div>
     </div>
     </nav>    
+  </div>
     <div class="parallax-window" data-parallax="scroll" data-image-src="/static/images/IMG_1140.jpg">
       <div class="container">
       <div class="row">
@@ -93,7 +78,6 @@
       </div>
         
         <div class="container">
->>>>>>> 1b592e31e33067285c7e0dfa58f5544835684e7f
       <div class="row">
           <form id="form-school">
             <div class="form-group">
@@ -101,7 +85,7 @@
               <input class="form-control" id="school-search" name="school" type="text"
                 placeholder="Desired School Here">
             </div>
-            <!-- <div class="form-group">
+            <div class="form-group">
                 <form id="form-conference">
                     <label for="conference">Conference</label>
                     <select class="form-control" id="conference" placeholder="Pick Desired Conference">
@@ -181,19 +165,25 @@
                         <option value="WI">Wisconsin</option>
                         <option value="WY">Wyoming</option>
                     </select>
-            </div> -->
+            </div>
             <button id="button" type="button" class="btn btn-default">Search</button>
           </form>
         </div>
         </div>
       </div>
     </div>
-    <div id="graphyboy" style="width:900px;height:400px;"></div>
+    <div id="graphyboy" style="width:900px;height:400px; margin:fit-content;">
+      <div class=container>
+         <div class=row>
+
+          </div>
+      </div>
+      </div>
     <!-- <img src = "{{url_for('static', filename='images/plot.png')}}"> -->
     <div>
       <div class=container>
-        <div class=row>
-            <table>
+        <div class=row style=height:50px>
+            <table font size="18";>
               <thead>
               <tr>
                 <th>School</th>

@@ -53,7 +53,8 @@ function runEnter() {
     var layout = {
       title: "Your School's Attendance",
       xaxis: { title: "Years"},
-      yaxis: { title: "Attendance"}
+      yaxis: { title: "Attendance"},
+      font: {size: 18}
     };
 
     // graph = document.getElementById('graphyboy');
