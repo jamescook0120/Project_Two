@@ -1,4 +1,4 @@
-Rnd,Pick,Tm,Player,Pos,Age,To,AP1,PB,St,CarAV,DrAV,G,Cmp,Att,Yds,TD,Int,Att,Yds,TD,Rec,Yds,TD,Solo,Int,Sk,College
+Rnd,Pick,Tm,Player,Pos,Age,To,AP1,PB,St,CareerAV,DraftedAV,GamesPlayed,Pass Completions,Pass Attempts,Passing Yards,Passing Touchdowns,Thrown Interceptions,Rushing Attempts,Rushing Yards,Rushing Touchdowns,Receptions,Receiving Yards,Receiving Touchdowns,Solo,Interceptions (DEF),Sacks,College
 1,1,CIN,Carson Palmer,QB,23,2017,0,3,12,108,61,182,3941,6307,46247,294,187,301,474,8,0,0,0,1,,,USC
 1,2,DET,Charles Rogers,WR,22,2005,0,0,0,4,4,15,0,0,0,0,0,2,17,0,36,440,4,,,,Michigan St.
 1,3,HOU,Andre Johnson,WR,22,2016,2,7,12,95,93,193,0,0,0,0,0,23,54,0,1062,14185,70,1,,,Miami (FL)
