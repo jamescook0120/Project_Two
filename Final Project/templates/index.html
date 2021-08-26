@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=3.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Follow The Fans</title>
+  <link rel="stlyesheet" href="/static/css/style.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="/static/js/parallax.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.3.0.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">a
+  </style>
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg" style="padding-bottom: 40px;">
+      
+        <button class="navbar-toggler" type="button"  data-target="#navbarText" onclick="welcome()">Home
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <button class="navbar-toggler" type="button" data-target="navbarText" onclick="data()">Data
+        </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+    </div>
+    </nav>    
+  </div>
+      <div class="container">
+      <div class="row">
+        <h1>
+          Welcome. Our goal here is to help you have a better understanding of the school you will be attending this fall. Recent developments in the NCAA
+          have made it so you are eligible to receive compensation for being and incredible athlete. This tool is simple. Search any school you are considering going to, 
+          and the tool will show you their game attendance based on the last few years. It would make sense that there is some correlation between the amount of eyes on you, 
+          and how much your new brand could be worth. We simply wish to aid you in that goal. 
+        </h1>    
+        <span style="padding-bottom: 40px;"></span>
+      </div>
+      </div>
+      <div>
+      
+
+        </div>
+      </div>
+      </div>
+        
+        <div class="container">
+      <div class="row">
+          <form id="form-school">
+            <div class="form-group">
+              <label for="">School</label>
+              <input class="form-control" id="school-search" name="school" type="text"
+                placeholder="Desired School Here">
+            
+            <button id="button" type="button" class="btn btn-default">Search</button>
+          </form>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="graphyboy" style="width:900px;height:400px; margin:fit-content;">
+      <div class=container>
+         <div class=row>
+
+          </div>
+      </div>
+      </div>
+    <!-- <img src = "{{url_for('static', filename='images/plot.png')}}"> -->
+    <div>
+      <div class=container>
+        <div class=row style=height:50px>
+            <table font size="18";>
+              <thead>
+              <tr>
+                <th>School</th>
+                <th>Team</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Conference</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="parallax-window" data-parallax="scroll" data-image-src="/static/images/IMG_1141.jpg"></div>
+      </div>
+  
+  
+ 
+
+
+  <script src="/static/js/fuse/draft_fuse.js"></script>
+  <script>
+    $('.parallax-window').parallax({imageSrc: '/static/images/img_1140.jpg'});
+    $('.parallax-window2').parallax({imageSrc: '/static/images/img_1141.jpg'});
+  </script>
+
+</body>
+
+</html>

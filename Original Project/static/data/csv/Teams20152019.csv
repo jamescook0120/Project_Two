@@ -1,0 +1,133 @@
+﻿School,Team,City,State,Current_Conference,ID
+Air Force,Falcons,USAF Academy, CO,Montain West,1
+Akron,Zips,Akron, OH,Mid-American,2
+Alabama,Crimson Tide,Tuscaloosa, AL,Southeastern,3
+Appalachian St.,Mountaineers,Boone, NC,Sun Belt,4
+Arizona,Wildcats,Tuscon, AZ,PAC-12,5
+Arizona St.,Sun Devils,Tempe, AZ,PAC-12,6
+Arkansas,Razorbacks,Fayetteville, AR,Southeastern,7
+Arkansas St.,Red Wolves,State University, AR,Sun Belt,8
+Army West Point,Black Knights,West Point, NY,Patriot League,9
+Auburn,Tigers,Auburn, AL,Southeastern,10
+Ball St.,Cardinals,Muncie, IN,Mid-American,11
+Baylor,Bears,Waco, TX,Big 12,12
+Boise St. ,Broncos,Boise, ID,Mountain West,13
+Boston College,Eagles,Chestnut Hill, MA,Atlantic Coast,14
+Bowling Green,Falcons,Bowling Green, OH,Mid-American,15
+Buffalo,Bulls,Buffalo, NY,Mid-American,16
+BYU,Cougars,Provo, UT,West Coast,17
+California,Golden Bears,Berkeley, CA,PAC-12,18
+Central Mich.,Chippewas,Mount Pleasant, MI,Mid-American,19
+Charlotte,49ers,Charlotte, NC,USA,20
+Cincinnati,Bearcats,Cincinnati, OH,American Athletic,21
+Clemson,Tigers,Clemson, SC,Atlantic Coast,22
+Coastal Caro.,Chanticleers,Conway, SC,Sun Belt,23
+Colorado,Buffaloes,Boulder, CO,PAC-12,24
+Colorado St. ,Rams,Fort Collins, CO,Mountain West,25
+Duke,Blue Devils,Durham, NC,Atlantic Coast,26
+East Carolina,Pirates,Greenville, NC,American Athletic,27
+Eastern Mich.,Eagles,Ypsilanti, MI,Mid-American,28
+FIU,Panthers,Miami, FL,USA,29
+Fla. Atlantic,Owls,Boca Raton, FL,USA,30
+Florida,Gators,Gainsville, FL,Southeastern,31
+Florida St.,Seminoles,Tallahassee, FL,Atlantic Coast,32
+Fresno St. ,Bulldogs,Fresno, CA,Mountain West,33
+Ga. Southern,Eagles,Statesboro, GA,Sun Belt,34
+Georgia,Bulldogs,Athens, GA,Southeastern,35
+Georgia St.,Panthers,Atlanta, GA,Sun Belt,36
+Georgia Tech,Yellow Jackets,Atlanta, GA,Atlantic Coast,37
+Hawaii,Rainbow Warriors,Honolulu, HI,Big West,38
+Houston,Cougars,Houston, TX,American Athletic,39
+Idaho,Bengals,Pocatello, ID,Big Sky,40
+Illinois,Fighting Illini,Champaign, IL,Big Ten,41
+Indiana,Hoosiers,Bloomington, IN,Big Ten,42
+Iowa,Hawkeyes,Iowa City, IA,Big Ten,43
+Iowa St.,Cyclones,Ames, IA,Big 12,44
+Kansas,Jayhawks,Lawrence, KS,Big 12,45
+Kansas St. ,Wildcats,Manhattan, KS,Big 12,46
+Kent St.,Golden Flashes,Kent, OH,Mid-American,47
+Kentucky,Wildcats,Lexington, KY,Southeastern,48
+La.-Monroe,Warhawks,Monroe, LA,Sun Belt,49
+Liberty,Flames,Lynchburg, VA,Independent,50
+Louisiana,Ragin Cajuns,Lafayette, LA,Sun Belt,51
+Louisiana Tech,Bulldogs,Ruston, LA,USA,52
+Louisville,Cardinals,Louisville, KY,Atlantic Coast,53
+LSU,Fighting Tigers,Baton Rouge, LA,Southeastern,54
+Marshall,Thundering Herd,Huntington, WV,USA,55
+Maryland,"Terrapins, Terps",College Park, MD,Big Ten,56
+Massachusetts,Minutemen,Amherst, MA,Atlantic 10,57
+Memphis,Tigers,Memphis, TN,American Athletic,58
+Miami (FL),Hurricanes,Miami, FL,Atlantic Coast,59
+Miami (OH),Redhawks,Miami, OH,Mid-American,60
+Michigan,Wolverines,Ann Arbor, MI,Big Ten,61
+Michigan St.,Spartans,East Lansing, MI,Big Ten,62
+Middle Tenn.,Blue Raiders,Murfreesboro, TN,USA,63
+Minnesota,Golden Gophers,Minneapolis, MN,Big Ten,64
+Mississippi St.,Bulldogs,Mississippi State, MS,Southeastern,65
+Missouri,Tigers,Columbia, MO,Southeastern,66
+Navy,Midshipmen,Annapolis, MD,Patriot League,67
+NC State,Wolfpack,Raleigh, NC,Atlantic Coast,68
+Nebraska,"Cornhuskers, Huskers",Lincoln, NE,Big Ten,69
+Nevada,Wolf Pack,Reno, NV,Mountain West,70
+New Mexico,Lobos,Albequerque, NM,Mountain West,71
+New Mexico St.,Aggies,Las Cruces, NM,Western Athletic,72
+North Carolina,Tar Heels,Chapel Hill, NC,Atlantic Coast,73
+North Carolina St.,Wolf Pack,Raleigh, NC,Atlantic Coast,74
+North Texas,Mean Green,Denton, TX,Non-NCAA Org,75
+Northern Ill.,Huskies,De Kalb, IL,Mid-American,76
+Northwestern,Wildcats,Evanston, IL,Big Ten,77
+Notre Dame,Fighting Irish,Notr Dame, IN,Atlantic Coast,78
+Ohio,Bobcats,Athens, OH,Mid-American,79
+Ohio St. ,Buckeyes,Columbus, OH,Big Ten,80
+Oklahoma,Sooners,Norman, OK,Big 12,81
+Oklahoma St.,Cowboys,Stillwater, OK,Big 12,82
+Old Dominion,Monarchs,Norfolk, VA,USA,83
+Ole Miss,Rebels,University, MS,Southeastern,84
+Oregon,Ducks,Eugene, OR,PAC-12,85
+Oregon St. ,Beavers,Corvallis, OR,PAC-12,86
+Penn St. ,Nittany Lions,University Park, PA,Big Ten,87
+Pittsburgh,Panthers,Pittsburg, PA,Atlantic Coast,88
+Purdue,Boilermakers,West Lafayette, IN,Big Ten,89
+Rice,Owls,Houston, TX,USA,90
+Rutgers,Scarlett Knights,New Brunswick, NJ,Big Ten,91
+San Diego St.,Aztecs,San Diego, CA,Mountain West,92
+San Jose St. ,Spartans,San Jose, CA,Mountain West,93
+SMU,Mustangs,Dallas, TX,American Athletic,94
+South Ala.,Jaguars,Mobile, AL,Sun Belt,95
+South Carolina,Gamecocks,Columbia, SC,Southeastern,96
+South Fla.,Bulls,Tampa, FL,American Athletic,97
+Southern California,Trojans,Los Angeles, CA,PAC-12,98
+Southern Miss.,Golden Eagles,Hattiesburg, MS,USA,99
+Stanford,Cardinals,Stanford, CA,PAC-12,100
+Syracuse,Orange,Syracuse, NY,Atlantic Coast,101
+TCU,Horned Frogs,Fort Worth, TX,Big 12,102
+Temple,Owls,Philadelphia, PA,American Athletic,103
+Tennessee,Volunteers,Knoxville, TN,Southeastern,104
+Texas,Longhorns,Austin, TX,Big 12,105
+Texas A&M,Aggies,College Station, TX,Southeastern,106
+Texas St.,Bobcats,San Marcos, TX,Sun Belt,107
+Texas Tech,Red Raiders,Lubbock, TX,Big 12,108
+Toledo,Rockets,Toledo, OH,Mid-American,109
+Troy,Trojans,Trol, AL,Sun Belt,110
+Tulane,Green Wave,New Orleans, LA,American Athletic,111
+Tulsa,Golden Hurricane,Tulsa, OK,American Athletic,112
+UAB,Blazers,Birmingham, AL,USA,113
+UCF,Knights,Orlando, FL,American Athletic,114
+UCLA,Bruins,Los Angeles, CA,PAC-12,115
+UConn,"Huskies, Uconn",Storrs, CT,Big East,116
+UNLV,Rebels,Las Vegas, NV,Mountain West,117
+Utah,Utes,Salt Lake City, UT,PAC-12,118
+Utah St.,Aggies,Logan, UT,Mountain West,119
+UTEP,Miners,El Paso, TX,USA,120
+UTSA,Roadrunners,San Antonio, TX,USA,121
+Vanderbilt,Commodores,Nashville, TN,Southeastern,122
+Virginia,Cavaliers,Charlottesville, VA,Atlantic Coast,123
+Virginia Tech,Hokies,Blacksburg, VA,Atlantic Coast,124
+Wake Forest,Demon Deacons,Winston-Salem, NC,Atlantic Coast,125
+Washington,Huskies,Seattle, WA,PAC-12,126
+Washington St.,Cougars,Pullman, WA,PAC-12,127
+West Virginia,Mountaineers,Morgantown, WV,Big 12,128
+Western Ky.,Hilltoppers,Bowling Green, KY,USA,129
+Western Mich.,Broncos,Kalamazoo, MI,Mid-American,130
+Wisconsin,Badgers,Madison, WI,Non-NCAA Org,131
+Wyoming,Cowboys,Laramie, WY,Mountain West,132
