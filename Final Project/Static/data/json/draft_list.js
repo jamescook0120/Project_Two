@@ -1,4 +1,4 @@
-[
+var player_list = [
   {
     "Rnd": 1,
     "Pick": 1,
