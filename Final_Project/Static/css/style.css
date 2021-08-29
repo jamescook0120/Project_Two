@@ -115,4 +115,11 @@ p {
     font-size: 16px;
 }
 
-
+#container { width: 100%; margin: auto; background-color: transparent; padding: 10px; }
+.row { height: 150px; margin-bottom: 20px; position: relative; }
+.row div { height: 100%; }
+.single { background-color: white; }
+.column-2 { width: 48%; }
+.left { background-color: white; float: left; }
+.center { float: left; margin: 0 5%; background-color: white; }
+.right { background-color: white; float: right; }
