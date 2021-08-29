@@ -1,103 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-us">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=3.0, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Follow The Fans</title>
-  <link rel="stlyesheet" href="/static/css/style.css">
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="/static/js/parallax.js"></script>
-  <script src="https://cdn.plot.ly/plotly-2.3.0.min.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">a
-  </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel= "stylesheet" href="/Final_Project/Static/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Follow The Fans - Insights</title>
+    <style>
+        img { width: 100%; height: 500px;}
+    
+        div.gallery {
+        margin: 45px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 200px;
+        background-color: rgb(216, 116, 49);
+        }
+
+        div.gallery:hover {
+        border: 1px solid #777;
+        }
+
+        div.gallery img {
+        width: 100%;
+        height: auto;
+        }
+
+        div.desc {
+        padding: 15px;
+        text-align: center;
+        font-size: larger;
+        }
+    </style>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="teams.html">Teams</a>
+        <a href="insights.html">Insights</a>
+        <a href="Group3intro.html">About Us</a>
+        <div class="animation start-home"></div>
+    </nav>
+    
+      
 </head>
 
 <body>
-  <div>
-    <nav class="navbar navbar-expand-lg" style="padding-bottom: 40px;">
-      
-        <button class="navbar-toggler" type="button"  data-target="#navbarText" onclick="welcome()">Home
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <button class="navbar-toggler" type="button" data-target="navbarText" onclick="data()">Data
-        </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-    </div>
-    </nav>    
-  </div>
-      <div class="container">
-      <div class="row">
-        <h1>
-          Welcome. Our goal here is to help you have a better understanding of the school you will be attending this fall. Recent developments in the NCAA
-          have made it so you are eligible to receive compensation for being and incredible athlete. This tool is simple. Search any school you are considering going to, 
-          and the tool will show you their game attendance based on the last few years. It would make sense that there is some correlation between the amount of eyes on you, 
-          and how much your new brand could be worth. We simply wish to aid you in that goal. 
-        </h1>    
-        <span style="padding-bottom: 40px;"></span>
-      </div>
-      </div>
-      <div>
-      
 
-        </div>
+    <div id= "logo">
+        <img src="/Final_Project/Static/images/Images/logo.png" />
+    </div>
+
+    <h1>MEET OUR DREAM TEAM!</h1>
+    <br>
+    <div class="gallery">
+        <a target="_blank" href="/Final_Project/Static/images/Images/Lashonda.jpg">
+          <img src="images/Images/Darian.jpeg" alt="Darian Roopnarine" width="600" height="400">
+          <h2>DARIAN ROOPNARINE</h2>
+        </a>
+        <div class="desc">A 39 year old career changer with 10+ years experience in financial services. 
+            Husband of 14 years and dad of 2.
+            Resides in Royersford PA</div>
       </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="/Final_Project/Static/images/Images/James.jpg">
+          <img src="images/Images/James.jpg" alt="James Cook" width="600" height="400">
+          <h2>JAMES COOK</h2>
+        </a>
+        <div class="desc">An enthusiastic and multitalented business professional,
+            experienced in a variety of areas related to business analysis, sales and marketing.
+            From "boots on the ground" interactives to formal board presentations,
+            whether you need graphics or data analysis, He can deliver.</div>
       </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="/Final_Project/Static/images/Images/Lashonda.jpg">
+          <img src="images/Images/Lashonda.jpg" alt="Lashonda Furman" width="600" height="400">
+          <h2>LASHONDA FURMAN</h2>
+        </a>
+        <div class="desc">A promising young professional stemming from the Education sector
+          with a diverse portfolio. Partner and mother of 2.    </div>
+      </div>
+      
+      <div class="gallery">
+        <a target="_blank" href="images/Images/batman.jpeg">
+          <img src="images/Images/b" alt="Mahesh Garg" width="600" height="400">
+          <h2>MAHESH GARG</h2>
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>         
         
-        <div class="container">
-      <div class="row">
-          <form id="form-school">
-            <div class="form-group">
-              <label for="">School</label>
-              <input class="form-control" id="school-search" name="school" type="text"
-                placeholder="Desired School Here">
-            
-            <button id="button" type="button" class="btn btn-default">Search</button>
-          </form>
-        </div>
-        </div>
-      </div>
-    </div>
-    <div id="graphyboy" style="width:900px;height:400px; margin:fit-content;">
-      <div class=container>
-         <div class=row>
-
-          </div>
-      </div>
-      </div>
-    <!-- <img src = "{{url_for('static', filename='images/plot.png')}}"> -->
-    <div>
-      <div class=container>
-        <div class=row style=height:50px>
-            <table font size="18";>
-              <thead>
-              <tr>
-                <th>School</th>
-                <th>Team</th>
-                <th>City</th>
-                <th>State</th>
-                <th>Conference</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-      </div>
-      <div class="parallax-window" data-parallax="scroll" data-image-src="/static/images/IMG_1141.jpg"></div>
-      </div>
-  
-  
- 
-
-
-  <script src="/static/js/fuse/draft_fuse.js"></script>
-  <script>
-    $('.parallax-window').parallax({imageSrc: '/static/images/img_1140.jpg'});
-    $('.parallax-window2').parallax({imageSrc: '/static/images/img_1141.jpg'});
-  </script>
-
 </body>
 
 </html>

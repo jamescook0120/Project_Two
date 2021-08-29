@@ -1,50 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-us">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=3.0, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Follow The Fans</title>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="https://cdn.plot.ly/plotly-2.3.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-<body>
-  <div>
-    <nav class="navbar navbar-expand-lg">
-      <button class="navbar-toggler" type="button"  data-target="#navbarText" onclick="welcome()">Home
-      <span class="navbar-toggler-icon"></span>
-      </button>
-      <button class="navbar-toggler" type="button" data-target="navbarText" onclick="data()">Data
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel= "stylesheet" href="/Final_Project/Static/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdn.plot.ly/plotly-2.3.0.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+    <title>Follow The Fans - Players</title>
+    <style>
+        img { width: 100%; height: 500px;}
+        table, th, td {
+    border: 1px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    width:fit-content
+    }
+    th, td {
+    background-color: #3c81b9;
+    }
+    tr:nth-child(even) {
+    background-color: #0119ec;
+    }
+    </style>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="teams.html">Teams</a>
+        <a href="insights.html">Insights</a>
+        <a href="Group3intro.html">About Us</a>
+        <div class="animation start-home"></div>
     </nav>
-  </div>
-
+    
+      
+</head>
 <body>
-    <table>
-      <thead>
-        <tr>
-          <th>School</th>
-          <th>Team</th>
-          <th>City</th>
-          <th>State</th>
-          <th>Conference</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </body>
-  <script src="/static/data/json/attendance2015.js"></script>
-  <script src="/static/data/json/attendance2016.js"></script>
-  <script src="/static/data/json/attendance2017.js"></script>
-  <script src="/static/data/json/attendance2018.js"></script>
-  <script src="/static/data/json/attendance2019.js"></script>
-  <script src="/static/data/json/teams.js"></script>
-  <script src="/Final Project/static/js/index.js"></script>
-  <script src="/Final Project/Static/js/draft_fuse.js"></script>
-  <script src="/Final Project/Static/data/json/draft_list.js"></script>
 
+    <div id= "logo">
+        <img src="/Final_Project/static/images/Images/logo3.png" />
+    </div>
+
+    <div class="container"> 
+        <div class="row">
+            <form id="form-search">
+              <div class="form-group">
+                <input class="form-control" id="searchbar" name="school" type="text"
+                  placeholder="Player Name or College">
+              </div>
+        <h2>Players Drafted Since 2003</h2>
+        <p>This searchable table will allow you to search every player drafted since 2003 and you can view their career statistics since they've been drafted. </p>\
+            </form>
+        </div>
+    </div>
+    <div class=containter>
+        <div class=row></div>
+            <font size="4">
+                <table style="color:white;" >
+                <thead>
+                    <tr>
+                        <th>School</th>
+                        <th>Team</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Conference</th>
+                        <th>ID</th>    
+                    </tr>
+                    <td></td>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </font>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="/Final_Project/static/data/json/teams.js"></script>
+<script type="text/javascript" src="/Final_Project/Static/js/fuse_teams.js"></script>
+
+</html>

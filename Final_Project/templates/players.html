@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel= "stylesheet" href="/Final_Project/Static/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdn.plot.ly/plotly-2.3.0.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+    <title>Follow The Fans - Players</title>
+    <style>
+        img { width: 100%; height: 500px;}
+        table, th, td {
+    border: 1px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    width:fit-content
+    }
+    th, td {
+    background-color: #3c81b9;
+    }
+    tr:nth-child(even) {
+    background-color: #0119ec;
+    }
+    </style>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="teams.html">Teams</a>
+        <a href="insights.html">Insights</a>
+        <a href="Group3intro.html">About Us</a>
+        <div class="animation start-home"></div>
+    </nav>
+    
+      
+</head>
+<body>
+
+    <div id= "logo">
+        <img src="/Final_Project/static/images/Images/logo3.png" />
+    </div>
+
+    <div class="container"> 
+        <div class="row">
+            <form id="form-search">
+              <div class="form-group">
+                <input class="form-control" id="searchbar" name="school" type="text"
+                  placeholder="Player Name or College">
+              </div>
+        <h2>Players Drafted Since 2003</h2>
+        <p>This searchable table will allow you to search every player drafted since 2003 and you can view their career statistics since they've been drafted. </p>\
+            </form>
+        </div>
+    </div>
+    <div class=containter>
+        <div class=row></div>
+            <font size="4">
+                <table style="color:white;" >
+                
+                <thead>
+                    <tr>
+                        <th>Round</th>
+                        <th>Pick</th>
+                        <th>Team</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Age</th>
+                        <th>To</th>
+                        <th>All Pro 1st Teams</th>
+                        <th>Pro-Bowl Appearances</th>
+                        <th>Years Starting</th>
+                        <th>Career Added Value</th>
+                        <th>Drafted Added Value</th>
+                        <th>Games Played</th>
+                        <th>Pass Completions</th>
+                        <th>Pass Attempts</th>
+                        <th>Passing Yards</th>
+                        <th>Touchdowns</th>
+                        <th>Thrown Interceptions</th>
+                        <th>Rushing Attempts</th>
+                        <th>Rushing Yards</th>
+                        <th>Rushing Touchdowns</th>
+                        <th>Receptions</th>
+                        <th>Receiving Yards</th>
+                        <th>Receiving Touchdowns</th>
+                        <th>Unassisted Tackles</th>
+                        <th>Interceptions</th>
+                        <th>Sacks</th>
+                        <th>College</th>
+                    </tr>
+                    <td></td>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </font>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="/Final_Project/Static/data/json/player_list.js"></script>
+<script type="text/javascript" src="/Final_Project/static/data/json/teams.js"></script>
+<script type="text/javascript" src="/Final_Project/Static/js/fuse_player.js"></script>
+
+</html>

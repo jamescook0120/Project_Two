@@ -1,3 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel= "stylesheet" href="/Final_Project/Static/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Follow The Fans - Insights</title>
+    <style>
+        img { width: 90%; height: 500px;}
+        * {
+	        padding: 15px;
+	        margin: 15px;
+        }
+        body {
+            overflow-x: hidden;
+            font-family:'Cherry Swash', cursive;
+        }
+
+        .section-container {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            display: flex;
+            margin-top: calc(var(--bs-gutter-y) * -1);
+            margin-right: calc(var(--bs-gutter-x) / -2);
+            margin-left: calc(var(--bs-gutter-x) / -2);
+        }
+        .section-container .columns {
+            flex:0 auto;
+            width:50%;
+        }
+        .section-container .columns.image {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .section-container .columns.content .content-container {
+            padding: 40px 50px;
+        }
+        .section-container .columns.content .content-container h2 {
+            font-weight: 700;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+        .section-container .columns.content .content-container p {
+            font-weight: 400;
+            font-size: 16px;
+            margin-bottom: 20px;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        @media screen and (max width: 767px) {
+           .section-container {
+               flex-flow: row wrap;
+           } 
+           .section-container .columns.image {
+               display:block;
+               order:1;
+               width:90%;
+               height: 250px;
+           }
+           .section-container .columns.content {
+               display: block;
+               order: 2;
+               width: 90%;  
+           }
+           .section-container .columns.content .content-container {
+               padding: 20px 35px;
+           }
+           .section-container .columns.content .content-container h2 {
+               margin-bottom: 5px;
+           }
+        }
+
+    </style>
     
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="teams.html">Teams</a>
+        <a href="insights.html">Insights</a>
+        <a href="Group3intro.html">About Us</a>
+        <div class="animation start-home"></div>
+    </nav>
+    <div id= "logo">
+        <img src="/Final_Project/Static/images/Images/logo.png" />
+    </div>
+      
+</head>
+
+<body>
+    <div class="section-container">
+        <div class="columns image" style=
+        "background-image: url('/Final_Project/Static/images/Graphs/kmeans.png');">
+            &nbsp;
+        </div>
+
+        <div class="columns content">
+            <div class="content-container">
+                <h2> Machine Learning</h2>
+                <p>We set up an algorithm to systematically pick what college you should go to based on your game average statistics that we were going to include. 
+                    during our testing and trying to make the model fit with a KNN model we were never able to get a reliable enough reading to say we could determine what school
+                    you should go to with any real accuracy. In fact it seemed as though the more trials we put our model through, the less accurate it got. Simply put, atheletes,
+                    or even people in general, are not easily quantified by a series of numbers.
+                </p>
+            </div>
+        </div>
+
+        <div class="columns image" style=
+        "background-image: url('/Final_Project/Static/images/Graphs/MLplot.png');">
+            &nbsp;
+        </div>            
+    </div>
+
+    <div class="section-container">
+        <div class="columns image" style=
+        "background-image: url('/Final_Project/Static/images/Graphs/career.png');">
+            &nbsp;
+        </div>
+
+        <div class="columns content">
+            <div class="content-container">
+                <h2> Added Value Statistics</h2>
+                <p>Added Value is a statistic given to ever player to help quanitify the impact they have on their team. Whether over their entire career, or just to the team they 
+                were drafted to, it seems even actual NFL analysts have a hard time giving precise estimations for how valuable a player can be. Although in comparison to all statistics
+                it seems there will always be significant outliers in sports. 
+                </p>
+            </div>
+        </div>
+
+        <div class="columns image" style=
+        "background-image: url('/Final_Project/Static/images/Graphs/Pass.png');">
+            &nbsp;
+        </div>            
+    </div>
+</body>
+
+</html>
